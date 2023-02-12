@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 /**
+EJECUTAR UNA SOLA VEZ
 @Component
 public class CreateRoles implements CommandLineRunner {
 
