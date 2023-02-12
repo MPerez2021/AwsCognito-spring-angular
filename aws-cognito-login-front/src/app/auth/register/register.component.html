@@ -1,0 +1,32 @@
+<div class="login__container min-h-screen flex flex-column justify-content-center align-items-center">
+  <p *ngIf="registerResponse.length" class="p-3 flex align-items-center gap-2" [style]="{'background-color':'#c8e6c9'}">
+    <span>
+      <i class="pi pi-check"></i>
+    </span>{{registerResponse}}
+  </p>
+  <p-card header="Crea tu cuenta" [style]="{'padding': '1rem', 'width': '30rem'}">
+    <form #registerForm="ngForm">
+      <div class="flex flex-column gap-3">
+        <label for="" class="text-lg">Nombre</label>
+        <input type="text" pInputText class=" w-full" placeholder="Ej. María"
+        [(ngModel)]="registerData.name" name="name">
+        <label for="" class="text-lg">Apellido</label>
+        <input type="text" pInputText class=" w-full" placeholder="Ej. López"
+         [(ngModel)]="registerData.lastName" name="lastName">
+        <label for="" class="text-lg">E-mail</label>
+        <input type="email" pInputText class=" w-full" placeholder="Ej. prueba@hotmail.com"
+        [(ngModel)]="registerData.email" name="email">
+        <label for="" class="text-lg">Contraseña</label>
+        <span class="p-input-icon-right">
+          <i class="pi {{showPassword ? 'pi-eye-slash' : 'pi-eye'}}" (click)="onShowPassword()"></i>
+          <input type="{{showPassword ? 'text' : 'password'}}" pInputText class=" w-full" placeholder="*****"
+          [(ngModel)]="registerData.password" name="password">
+        </span>
+      </div>
+    </form>
+    <div class="footer w-full flex flex-column gap-3">
+      <p-button label="Crear cuenta" class="mt-3" (onClick)="onSignUp(registerData)"></p-button>
+      <small>¿Ya tienes una cuenta? <a routerLink="/login" class="text-white">Inicia sesión aquí</a></small>
+    </div>
+  </p-card>
+</div>

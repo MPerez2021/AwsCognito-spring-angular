@@ -1,0 +1,33 @@
+<div class="home__container min-h-screen text-white flex flex-column justify-content-center align-items-center">
+  <p-card header="Hola {{userLogged.name}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="../../assets/TEC-NOVEDAD.png">
+    </ng-template>
+    <p class="line-height-4 text-center">Si quieres ver más detalles de tu cuenta da click aquí <span><i
+          class="pi pi-arrow-down"></i></span></p>
+    <p-button label="Ver detalles de la cuenta" class="flex justify-content-center mt-3"
+      (onClick)="getUserDetails(userLogged.role.roleName)"></p-button>
+    <ng-container *ngIf="showDetails">
+      <div class="mt-3">
+        <h3>Cuenta</h3>
+        <ul class="list-none">
+          <p-divider align="left" type="dashed">
+            <div class="inline-flex align-items-center">
+              <i class="pi pi-user mr-2"></i>
+              <b>Información personal</b>
+            </div>
+          </p-divider>
+          <li class="mb-3">Nombre: {{userLogged.name}} {{userLogged.lastName}}</li>
+          <li>E-mail: {{userLogged.email}} </li>
+          <p-divider align="left" type="dashed">
+            <div class="inline-flex align-items-center">
+              <i class="pi pi-user mr-2"></i>
+              <b>Rol</b>
+            </div>
+          </p-divider>
+          <li>{{userRole}} </li>
+        </ul>
+      </div>
+    </ng-container>
+  </p-card>
+</div>
