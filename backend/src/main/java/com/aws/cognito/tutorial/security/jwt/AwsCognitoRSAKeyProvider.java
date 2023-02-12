@@ -16,7 +16,7 @@ public class AwsCognitoRSAKeyProvider implements RSAKeyProvider {
     private final JwkProvider provider;
 
     public AwsCognitoRSAKeyProvider(String awsCognitoRegion, String identityPoolUrl) {
-        String jwtUrl = "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_icUG01UmE/.well-known/jwks.json";
+        String jwtUrl = "https://cognito-idp.us-east-1.amazonaws.com/${YOUR_USER_POOL_ID}/.well-known/jwks.json";
         String url = String.format(jwtUrl, awsCognitoRegion, identityPoolUrl);
         try {
             awsStoreUrl = new URL(url);
