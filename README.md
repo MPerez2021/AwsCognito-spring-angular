@@ -11,5 +11,7 @@ En este tutorial vas a aprender a:
 **¿Tienes una duda?, no dudes en escribirme**: <a href = "mailto:mdev.programmer@gmail.com">mdev.programmer@gmail.com</a>
 
 Tutorial completo en youtube dando click en la imágen :arrow_down:
+<a href="https://youtu.be/q3nKR6Rpdag" target="_blank" rel="noreferrer"> 
+  <img src="https://user-images.githubusercontent.com/60261662/218343535-37e8e131-d1d1-4478-a0a0-d03814a8b6ca.png" alt="youtube.logo" widt="250" height="350"/>
+</a> 
 
-<img src="https://user-images.githubusercontent.com/60261662/218343535-37e8e131-d1d1-4478-a0a0-d03814a8b6ca.png" alt="youtube.logo" widt="250" height="350"/>
